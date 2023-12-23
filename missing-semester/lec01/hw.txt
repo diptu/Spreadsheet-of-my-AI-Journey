@@ -1,0 +1,14 @@
+cd /tmp
+mkdir missing
+touch man
+touch missing/semester
+echo 'touch missing/semester'
+echo '#!/bin/sh' > missing/semester
+echo 'curl --head --silent https://missing.csail.mit.edu' >> missing/semester
+./missing/semester
+sh ./missing/semester
+man chmod
+chmod 777 missing/semester
+./missing/semester
+date -r  missing/semester | cat > missing/last-modified.txt
+cat /sys/class/power_supply/BAT1/capacity
