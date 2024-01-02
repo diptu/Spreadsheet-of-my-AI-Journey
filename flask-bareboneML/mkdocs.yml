@@ -1,0 +1,4 @@
+site_name: ML barebone template
+
+theme:
+  name: "material"
